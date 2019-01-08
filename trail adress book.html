@@ -1,0 +1,130 @@
+<html>
+
+<head>
+    <h1><b><i> Adress book</b></i></h1>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url();
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  
+
+}
+
+#myUL li a {
+  border: 1px solid rgb(238, 77, 28);
+  margin-top: 5px; /* Prevent double borders */
+  background-color: #f05a28;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+
+  
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #f7931e;
+ 
+}
+li {
+
+width: 1010px; 
+  float: left;
+ 
+ 
+}
+
+</style>
+</head>
+
+<body>
+    <style>
+        body {
+                    background-color: rgb(243, 141, 24)
+                }
+            </style>
+
+
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+    <ul id="myUL">
+
+        <li><a href="profle_info.html"><img src="man.png" width="100" height="100" />Chelan </a></li>
+        <li><a href="profle_info.html"><img src="man.png" width="100" height="100" />Bernard</a></li>
+
+        <li><a href="profle_info.html"><img src="man.png" width="100" height="100" />Douglas</a></li>
+        <li><a href="profle_info.html"><img src="man.png" width="100" height="100" />Constant</a></li>
+
+        <li><a href="profle_info.html"><img src="man.png" width="100" height="100" />Christiaan</a></li>
+        <li><a href="profle_info.html"><img src="man.png" width="100" height="100" />Jeroen</a></li>
+        <li><a href="profle_info.html"><img src="man.png" width="100" height="100" />René</a></li>
+        <li><a href="profle_info.html"><img src="man.png" width="100" height="100" /> Martijn</a></li>
+        <li><a href="profle_info.html"><img src="women.png" width="100" height="100" /> Marcella</a></li>
+        <li><a href="profle_info.html"><img src="man.png" width="100" height="100" />Richard</a></li>
+        <li><a href="profle_info.html"><img src="women.png" width="100" height="100" />Anke</a></li>
+        <li><a href="profle_info.html"><img src="women.png" width="100" height="100" />Simone</a></li>
+        <li><a href="profle_info.html"><img src="man.png" width="100" height="100" />Frans</a></li>
+        <li><a href="profle_info.html"><img src="man.png" width="100" height="100" />Alex</a></li>
+        <li><a href="profle_info.html"><img src="man.png" width="100" height="100" />Paul</a></li>
+        <li><a href="profle_info.html"><img src="women.png" width="100" height="100" />Eline</a></li>
+        <li><a href="profle_info.html"><img src="man.png" width="100" height="100" />Bas</a></li>
+        <li><a href="profle_info.html"><img src="man.png" width="100" height="100" />Jan-Willem</a></li>
+        <li><a href="profle_info.html"><img src="man.png" width="100" height="100" />Jack</a></li>
+        <li><a href="profle_info.html"><img src="maha.png" width="100" height="100" />Maha</a></li>
+        <li><a href="profle_info.html"><img src="man.png" width="100" height="100" />Eef</a></li>
+        <li><a href="profle_info.html"><img src="man.png" width="100" height="100" />Semere</a></li>
+        <li><a href="profle_info.html"><img src="man.png" width="100" height="100" />Cristepher</a></li>
+        <li><a href="profle_info.html"> <img src="man.png" width="100" height="100" />Stas</a></li>
+        <li><a href="profle_info.html"><img src="man.png" width="100" height="100" />Gerd</a></li>
+        <li><a href="profle_info.html"><img src="man.png" width="100" height="100" />Dhiradj</a></li>
+        <li><a href="profle_info.html"><img src="man.png" width="100" height="100" />Maarten</a></li>
+        <li><a href="profle_info.html"><img src="man.png" width="100" height="100" />Bart</a></li>
+        <li><a href="profle_info.html"><img src="man.png" width="100" height="100" />Randalph</a></li>
+        <li><a href="profle_info.html"><img src="women.png" width="100" height="100" />Semhar</a></li>
+
+
+
+
+    </ul>
+
+    <script>
+        function myFunction() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
